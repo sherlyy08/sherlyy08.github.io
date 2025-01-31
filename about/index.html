@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <style>
+      body{
+        background-color: #F8FAFC;
+        overflow-x: hidden;
+      }      
+
+      .typing-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .typing-text {
+            font-weight: bold;
+            border-right: 2px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+      svg {
+        width: 100vw;
+      }
+
+      footer{
+        background-color: #987070;
+      }
+      .bottom-section {
+        background-color: #987070; 
+        height: 10px;
+       
+      }
+    </style>
+
+    <title>My Website | About</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR SECTION -->
+      <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top"
+        style="background-color: #000000;">
+        <div class="container">
+          <a class="navbar-brand" href="#">My Porto</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../home/index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  About Me
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#section2">My Identity</a></li>
+                  <li><a class="dropdown-item" href="#section3">Educational Background</a></li>
+                  <li><a class="dropdown-item" href="#section4">Experience</a></li>
+                  <li><a class="dropdown-item" href="#section5">Hobby</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">About Me</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../skills/index.html">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../projects/index.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact/index.html">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- NAVBAR END -->
+
+      <!-- CONTENT 1 -->
+    <section style="background-color: #F8FAFC;" id="section1">
+      <div class="container-fluid typing-container p-2">
+        <div class="row text-center mt-5">
+          <div class="col">
+            <h3 class="typing-text" id="typing"></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const text = "HALOO!!!";
+      let index = 0;
+      const typingElement = document.getElementById("typing");
+
+      function typeEffect() {
+          if (index < text.length) {
+              typingElement.textContent += text.charAt(index);
+              index++;
+              setTimeout(typeEffect, 100);
+          } else {
+              setTimeout(() => {
+                  typingElement.textContent = "";
+                  index = 0;
+                  typeEffect();
+              }, 2000);
+          }
+      }
+
+      window.onload = typeEffect;
+  </script>
+    <!-- CONTENT 1 END -->
+
+    <!-- CONTENT 2 -->
+    <section class="about pt-2" style="background-color: #F8FAFC;">
+      <div class="container px-4 mt-5">
+        <div class="row gx-5">
+          <div class="col-sm-9">
+          <div class="p-3 border">Saya, Sherly Agustina Arnanda, seorang mahasiswa aktif Teknik Informatika yang antusias dan memiliki kemampuan komunikasi yang baik. Dengan minat yang sangat besar dalam dunia teknologi komputer. Selama perkuliahan, saya telah mempelajari berbagai konsep dasar ilmu komputer dan mengembangkan minat yang kuat dalam mendesain sebuah web. Walaupun saya alumni jurusan akuntansi, tidak memudarkan semangat saya untuk mendalami bidang ini. Saya juga tertarik dengan prinsip-prinsip UI/UX dan selalu berusaha untuk menciptakan pengalaman pengguna yang seamless dan menyenangkan.</div>
+          </div>
+
+          <div class="col-sm-3">
+            <div>
+              <img src="poto 1.jpg" class="rounded float-end" alt="content image" height="100%" width="100%">
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#987070" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,192C384,192,480,160,576,170.7C672,181,768,235,864,234.7C960,235,1056,181,1152,144C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+    <!-- CONTENT 2 END -->
+
+    <!-- CONTENT 3 -->
+    <section class="projects" style="background-color: #987070;" id="section2">
+      <div class="container-fluid pt-1">
+        <div class="row text-center mt-5 text-light">
+          <div class="col">
+            <h3>My Identity</h3><hr>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="identity pt-1" style="background-color: #987070;">
+      <div class="row justify-content-center m-5">
+        <div class="col-sm-8">
+          <table class="table table-striped border text-light">
+            <tbody>
+              <tr>
+                <th scope="row">Nama</th>
+                <td>:  Sherly Agustina Arnanda</td>
+              </tr>
+              <tr>
+                <th scope="row">Tempat, Tgl Lahir</th>
+                <td>:  Bangkinang, 30 Agustus 2005</td>
+              </tr>
+              <tr>
+                <th scope="row">Alamat</th>
+                <td>:  SP 2 Sukamulya, Bangkinang, Kampar-Riau</td>
+              </tr>
+              <tr>
+                <th scope="row">Status</th>
+                <td>:  Mahasiswi S1 Teknik Informatika, Universitas Pahlawan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F8FAFC" fill-opacity="1" d="M0,160L80,176C160,192,320,224,480,218.7C640,213,800,171,960,128C1120,85,1280,43,1360,21.3L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </section>
+    <!-- CONTENT 3 END -->
+    
+    <!-- CONTENT 4 -->
+    <section class="projects" style="background-color: #F8FAFC;" id="section3">
+      <div class="container-fluid pt-1">
+        <div class="row text-center mt-5">
+          <div class="col">
+            <h3> Educational Background</h3><hr>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="identity" style="background-color: #F8FAFC;">
+      <div class="row justify-content-center">
+        <div class="col-sm-6">
+          <table class="table table-striped border mt-5" style="color: #604242;">
+            <tbody>
+              <tr>
+                <th scope="row">-  SMPN 02 Bangkinang</th>
+                <td>(2018-2021)</td>
+              </tr>
+              <tr>
+                <th scope="row">-  SMKN 01 Tapung</th>
+                <td>(2021-2024)</td>
+              </tr>
+              <tr>
+                <th scope="row">- Universitas Pahlawan Tuanku Tambusai</th>
+                <td>(present)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#987070" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,192C384,192,480,160,576,170.7C672,181,768,235,864,234.7C960,235,1056,181,1152,144C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+    <!-- CONTENT 4 END -->
+
+    <!-- CONTENT 5 -->
+    <section class="projects" style="background-color: #987070;" id="section4">
+      <div class="container-fluid pt-1">
+        <div class="row text-center text-light mt-5">
+          <div class="col">
+            <h3>Experience</h3><hr>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="identity pt-1" style="background-color: #987070;">
+      <div class="row justify-content-center m-5">
+        <div class="col-sm-10">
+          <table class="table border text-light">
+            <tbody>
+              <tr>
+                <th scope="row">Internship</th>
+                <td>:  Asisten Administrasi di Toko Elektronik KUD Sawit Jaya</td>
+                <td>(Okt 2022-Feb 2023)</td>
+              </tr>
+              <tr>
+                <th scope="row">Kepanitiaan</th>
+                <td>:  - Penyambutan Tamu Pada Saat Farewell Party di SMKN 01 TAPUNG<br>
+                    :  - Panitia MPLS SMKN 01 Tapung 2023<br>
+                    :  - Ketua Pelaksana LDKS OSIS SMKN 01 Tapung Periode 2023-2024<br>
+                    :  - Penyambutan Tamu Pada Saat Job Fair & Expo 2023 di SMKN 01 Tapung<br>
+                    :  - Sekretaris Angkatan 2024 SMKN 01 Tapung
+                </td>
+                <td>(Mei 2023) <br>
+                    (Jul 2023)<br>
+                    (Sep 2023)<br>
+                    (Okt 2023)<br>
+                    (Jan - Apr 2024)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F8FAFC" fill-opacity="1" d="M0,192L34.3,213.3C68.6,235,137,277,206,256C274.3,235,343,149,411,117.3C480,85,549,107,617,112C685.7,117,754,107,823,101.3C891.4,96,960,96,1029,101.3C1097.1,107,1166,117,1234,122.7C1302.9,128,1371,128,1406,128L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+    </section>
+    <!-- CONTENT 5 END -->
+
+    <!-- CONTENT 6 -->
+    <section class="projects" style="background-color: #F8FAFC;" id="section5">
+      <div class="container-fluid pt-1">
+        <div class="row text-center mt-5">
+          <div class="col">
+            <h3>Hobby</h3><hr>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="identity pt-1" style="background-color: #F8FAFC;">
+      <div class="row row-cols-1 row-cols-sm-3 gx-5 m-3 text-center justify-content-center">
+        <div class="col-sm-3">
+          <div class="card h-100">
+            <img src="music.jpg" class="card-img-top" alt="logo spotify">
+            <div class="card-body">
+              <p class="card-text">Listening to Music</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card h-100">
+            <img src="novel.jpg" class="card-img-top" alt="foto buku novel">
+            <div class="card-body">
+              <p class="card-text">Reading a Fiction Story</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card h-100">
+            <img src="watcing.jpg" class="card-img-top" alt="logo youtube">
+            <div class="card-body">
+              <p class="card-text">Watcing cartoons & Series Movie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#987070" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,192C384,192,480,160,576,170.7C672,181,768,235,864,234.7C960,235,1056,181,1152,144C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+    <!-- CONTENT 6 END -->
+
+
+      <!-- FOOTER -->
+      <footer class="text-light text-center pt-3">
+        <div class="container">
+            <p>&copy; 2025. Created by Sherlya.</p>
+        </div>
+        <div class="bottom-section"></div>
+      </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>

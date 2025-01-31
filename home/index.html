@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+      body{
+        background-color: #F8FAFC;
+      }      
+
+      .typing-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .typing-text {
+            font-weight: bold;
+            border-right: 2px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+
+    <title>My Website | Home</title>
+  </head>
+
+  <body>
+    <!-- NAVBAR SECTION -->
+      <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top"
+        style="background-color: #000000;">
+        <div class="container">
+          <a class="navbar-brand" href="#">My Porto</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../about/index.html">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../skills/index.html">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../projects/index.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../contact/index.html">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- NAVBAR END -->
+
+      <!-- JUDUL HALAMAN -->
+      <div class="container typing-container text-light mt-5" style="background-color: #987070;">
+        <h2 class="typing-text" id="typing"></h2>
+      </div>
+
+    <script>
+        const text = "Welcome to My Porto!";
+        let index = 0;
+        const typingElement = document.getElementById("typing");
+
+        function typeEffect() {
+            if (index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100);
+            } else {
+                setTimeout(() => {
+                    typingElement.textContent = "";
+                    index = 0;
+                    typeEffect();
+                }, 2000);
+            }
+        }
+
+        window.onload = typeEffect;
+    </script>
+    <!-- END -->
+
+      <!-- CONTENT -->
+      <header class="py-5">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2> Sherly Agustina Arnanda </h2>
+                    <p> Mahasiswa Teknik Informatika <br><hr>
+                    Merancang kode, menciptakan era masa depan cerah!
+                    </p>                   
+                </div>
+                <div class="col-md-6">     
+                    <img src="foto profil.jpg" alt="My Foto" width="500" class="img-fluid rounded-circle" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+
+                <script>
+                  function zoomIn(img) {
+                    img.style.transform = 'scale(1.2)';
+                    img.style.transition = 'transform 0.2s ease';
+                  }
+
+                  function zoomOut(img) {
+                    img.style.transform = 'scale(1)';
+                    img.style.transition = 'transform 0.2s ease';
+                  }
+                </script>
+                </div>
+            </div>
+        </div>
+      </header>
+      <!-- CONTENT END -->
+
+      <!-- FOOTER -->
+      <section class="container-fluid mt-5 px-1">
+        <p class="text-center">My Social Media</p>
+        <div class="d-flex px-1 justify-content-center">
+            <a href="https://twitter.com/arxanddd_" target="_blank" class="me-3">
+                <i class="bi bi-twitter-x" style="color: #54473F;"></i>
+            </a>
+            <a href="https://www.instagram.com/sherlya_rnd" target="_blank" class="me-3">
+                <i class="bi bi-instagram" style="color: #54473F;"></i>
+            </a>
+            <a href="https://line.me/ti/p/augsthaa" target="_blank" class="me-3">
+                <i class="bi bi-line" style="color: #54473F;"></i>
+            </a>
+        </div>
+      </section>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+      </script>
+  </body>
